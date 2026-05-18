@@ -96,12 +96,13 @@ This system provides separate **Admin and Student modules** for managing academi
 student_portal/
 │
 ├── admin/
+│
 ├── uploads/
-│ ├── assignments/
-│ ├── submissions/
-│ ├── course_materials/
-│ ├── course_notes/
-│ └── notifications/
+│   ├── assignments/
+│   ├── submissions/
+│   ├── course_materials/
+│   ├── course_notes/
+│   └── notifications/
 │
 ├── config.php
 ├── student.sql
