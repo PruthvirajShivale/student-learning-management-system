@@ -113,51 +113,53 @@ student_portal/
 ├── submit_assignment.php
 ├── notifications.php
 └── edit_profile.php
+
 ---
 
 ## 📸 Screenshots
 
 ### Login Page
-![Login Page](project-screenshots/login-page.JPG)
+![Login Page](login-page.JPG)
 
 ### Admin Dashboard
-![Admin Dashboard](project-screenshots/admin-dashboard-page.JPG)
+![Admin Dashboard](admin-dashboard-page.JPG)
 
 ### Student Dashboard
-![Student Dashboard](project-screenshots/student-dashboard.JPG)
+![Student Dashboard](student-dashboard.JPG)
 
 ### Student Management
-![Student Management](project-screenshots/student-management-page.JPG)
+![Student Management](student-management-page.JPG)
 
 ### Course Management
-![Course Management](project-screenshots/course-manaagement-page.JPG)
+![Course Management](course-manaagement-page.JPG)
 
 ### Course Materials
-![Course Materials](project-screenshots/course-material-page.JPG)
+![Course Materials](course-material-page.JPG)
 
 ### Upload Notes Page
-![Upload Notes Page](project-screenshots/upload-notes-page.JPG)
+![Upload Notes Page](upload-notes-page.JPG)
 
 ### Manage Assignments
-![Manage Assignments](project-screenshots/manage-assignment-page.JPG)
+![Manage Assignments](manage-assignment-page.JPG)
 
 ### Assignment Submission
-![Assignment Submission](project-screenshots/assignment-submission-page.JPG)
+![Assignment Submission](assignment-submission-page.JPG)
 
 ### View Submissions
-![View Submissions](project-screenshots/view-submissions-page.JPG)
+![View Submissions](view-submissions-page.JPG)
 
 ### Course Registration
-![Course Registration](project-screenshots/course-regestression.JPG)
+![Course Registration](course-regestression.JPG)
 
 ### Admin Notifications
-![Admin Notifications](project-screenshots/notification-of-admin.JPG)
+![Admin Notifications](notification-of-admin.JPG)
 
 ### Student Vault
-![Student Vault](project-screenshots/student-voult-page.JPG)
+![Student Vault](student-voult-page.JPG)
 
 ### Student Workspace
-![Student Workspace](project-screenshots/student-workspace-page.JPG)
+![Student Workspace](student-workspace-page.JPG)
+
 ---
 
 ## ⚙️ Installation Steps
