@@ -113,7 +113,6 @@ student_portal/
 ├── submit_assignment.php
 ├── notifications.php
 └── edit_profile.php
-
 ---
 
 ## 📸 Screenshots
@@ -159,7 +158,6 @@ student_portal/
 
 ### Student Workspace
 ![Student Workspace](project-screenshots/student-workspace-page.JPG)
-
 ---
 
 ## ⚙️ Installation Steps
