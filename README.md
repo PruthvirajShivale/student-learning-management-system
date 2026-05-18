@@ -93,6 +93,7 @@ This system provides separate **Admin and Student modules** for managing academi
 
 ## 📂 Project Structure
 
+```text
 student_portal/
 │
 ├── admin/
@@ -114,6 +115,7 @@ student_portal/
 ├── submit_assignment.php
 ├── notifications.php
 └── edit_profile.php
+```
 
 ---
 
