@@ -88,7 +88,7 @@ foreach($registered_courses as $course) {
     $attendedLectures += $attendedCount;
 }
 
-// Prevent division by zero
+
 $attendancePercent = ($totalLectures > 0) ? round(($attendedLectures / $totalLectures) * 100) : 0;
 
 // Calculate Greeting
@@ -118,7 +118,6 @@ $firstName = explode(' ', $name)[0];
         :root {
             --font-main: 'Plus Jakarta Sans', sans-serif;
             
-            /* Modern Palette - Indigo/Violet */
             --primary: #4f46e5;
             --primary-dark: #4338ca;
             --secondary: #64748b;
@@ -636,8 +635,7 @@ $firstName = explode(' ', $name)[0];
         let minDiff = Infinity;
 
         courses.forEach(c => {
-            // Assume format "Monday" and "14:30" or "09:00 AM"
-            // This is a simplified parser. You might need to adjust based on exact DB string format
+       
             const courseDayIndex = days.indexOf(c.schedule_day); 
             
             if(courseDayIndex === -1) return; // Invalid day string
@@ -651,12 +649,11 @@ $firstName = explode(' ', $name)[0];
             
             const classMinutes = h * 60 + m;
 
-            // Calculate difference in minutes from NOW
-            // 1. Calculate scheduling index (DayIndex * 1440 + Minutes)
+            
             let currentTotal = currentDayIndex * 1440 + currentMinutes;
             let classTotal = courseDayIndex * 1440 + classMinutes;
 
-            // If class is earlier in week than now, add a week (7 * 1440)
+          
             if (classTotal < currentTotal) {
                 classTotal += 10080; 
             }
