@@ -10,7 +10,6 @@ if (!isset($_SESSION['student_id'])) {
 $student_id = $_SESSION['student_id'];
 $message = "";
 
-// Register course logic remains untouched
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $course_id = intval($_POST['course_id']);
     $check = $conn->prepare("SELECT id FROM student_courses WHERE student_id = ? AND course_id = ?");
