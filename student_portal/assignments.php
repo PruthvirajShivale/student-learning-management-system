@@ -393,9 +393,6 @@ while ($r = mysqli_fetch_assoc($res)) {
             $is_submitted = isset($subs[$a['id']]);
             $is_late = (!$is_submitted && strtotime($a['due_date']) < time());
             
-            // LOGIC FOR GROUPING BY COURSE
-            // We only show the course header if no specific course_id is set in URL
-            // AND the course name has changed from the previous row (since SQL is ordered by course_name)
             if (!$course_id && $last_course !== $a['course_name']):
             ?>
                 <div class="course-header-group">
