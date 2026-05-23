@@ -16,7 +16,7 @@ if (!isset($_GET['course_id'])) {
 $student_id = $_SESSION['student_id'];
 $course_id = intval($_GET['course_id']);
 
-// --- 3. ENROLLMENT CHECK (Backend Logic Preserved) ---
+// --- 3. ENROLLMENT CHECK  ---
 $check = $conn->prepare("SELECT id FROM student_courses WHERE student_id=? AND course_id=?");
 $check->bind_param("ii", $student_id, $course_id);
 $check->execute();
@@ -40,14 +40,14 @@ $lectures = $lectures_q->get_result();
 //   MERGED ATTENDANCE LOGIC STARTS HERE
 // ==========================================
 
-// We need to track attendance for the FIRST lecture immediately because it auto-plays.
+
 $current_lecture_id = 0; // Default initialization
 if ($lectures->num_rows > 0) {
     // 1. Peek at the first lecture to get its ID
     $first_lecture = $lectures->fetch_assoc(); 
     $current_lecture_id = $first_lecture['id'];
 
-    // 2. Insert Activity (Your provided logic)
+   
     $act_stmt = $conn->prepare("
         INSERT INTO student_activity 
         (student_id, course_id, lecture_id, join_time)
@@ -56,11 +56,11 @@ if ($lectures->num_rows > 0) {
     $act_stmt->bind_param("iii", $student_id, $course_id, $current_lecture_id);
     $act_stmt->execute();
     
-    // 3. Store activity in session
+    //  Store activity in session
     $_SESSION['activity_id'] = $act_stmt->insert_id;
     $act_stmt->close();
 
-    // 4. RESET Pointer so the HTML loop below works correctly
+    
     $lectures->data_seek(0); 
 }
 // ==========================================
@@ -106,7 +106,6 @@ if ($lectures->num_rows > 0) {
         .scroller::-webkit-scrollbar { width: 6px; }
         .scroller::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
 
-        /* --- Navbar: SaaS Glassmorphism --- */
         .glass-nav {
             background: var(--surface-glass);
             backdrop-filter: blur(12px);
@@ -533,9 +532,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
-// --- NEW ATTENDANCE LOGIC INSERTED HERE ---
 
-// Increment active time every minute if not idle
 let timer = setInterval(() => {
     if(document.hasFocus() && idleTime < idleLimit){
         activeMinutes++;
@@ -549,7 +546,6 @@ let timer = setInterval(() => {
     document.addEventListener(event, () => idleTime = 0);
 });
 
-// Warn student on early leave & Send Data
 window.addEventListener('beforeunload', (e) => {
     const minRequired = 10; // minimum active minutes
     if(activeMinutes < minRequired){
