@@ -186,7 +186,7 @@ Pruthviraj Shivale
 ---
 
 ## 📌 Note
-This project demonstrates a complete Learning Management System (LMS) with admin and student functionality, including course management, assignments, notifications, and personal workspace.
+This project demonstrates a Learning Management System (LMS) with admin and student functionality, including course management, assignments, notifications, and personal workspace.
 
 
 
