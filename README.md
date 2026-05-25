@@ -188,5 +188,12 @@ Pruthviraj Shivale
 ## 📌 Note
 This project demonstrates a Learning Management System (LMS) with admin and student functionality, including course management, assignments, notifications, and personal workspace.
 
+---
+
+ ## 📄 License
+This project is created for learning purposes.
+
+---
+
 
 
